@@ -42,15 +42,16 @@ function setStyles() {
             sheetIMG.setAttribute("src", "na_small_" + i + ".png");
             sheetIMG.setAttribute("alt", "na_style_" + i + ".css");
 
-            // this makes the browser load a different style sheet when the user clicks one of the thumbnail images
+            // this makes v
             sheetIMG.onclick = function (e) {
                   fancy.setAttribute("href", e.target.alt);
-                  a
+
             }
             figBox.appendChild(sheetIMG);
       }
 }
 
+//this code adds appearence of the thumbnail figure box.
 var thumbStyles = document.createElement("style");
 document.head.appendChild(thumbStyles);
 
@@ -60,8 +61,17 @@ document.styleSheets[document.styleSheets.length - 1].insertRule(
       left: 0px; \
       bottom: 0px; \
       }", 0);
-document.styleSheets[document.styleSheets.length - 1].insertRule();
-
+document.styleSheets[document.styleSheets.length - 1].insertRule(
+      "figure#styleThumbs img { \
+            outline: 1px solid black; \
+            cursor: pointer; \
+            opacity: 0.75; \
+      }", 0);
+document.styleSheets[document.styleSheets.length - 1].insertRule(
+      "figure#styleThumbs img:hover { \
+            outline: 1px solid red; \
+            opacity: 1.0; \
+      }", 0)
 
 
 
